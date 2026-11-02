@@ -1,7 +1,8 @@
-from player_reader import PlayerReader
-from player_stats import PlayerStats
 from rich.console import Console
 from rich.table import Table
+
+from player_reader import PlayerReader
+from player_stats import PlayerStats
 
 
 SEASONS = [
@@ -21,9 +22,9 @@ NATIONALITIES = [
 ]
 
 
-def print_players(players, season, nationality):
+def print_players(players, season, selection):
     console = Console()
-    console.print(f"\nSeason {season} players from {nationality}\n")
+    console.print(f"\nSeason {season} players from {selection}\n")
 
     table = Table(show_header=True, header_style="bold")
     table.add_column("Released")
@@ -71,6 +72,11 @@ def main():
 
         players = stats.top_scorers_by_nationality(nationality)
         print_players(players, season, nationality)
+
+    team = input("Team (leave empty to quit): ").strip().upper()
+    if team:
+        players = stats.top_scorers_by_team(team)
+        print_players(players, season, team)
 
 
 if __name__ == "__main__":
