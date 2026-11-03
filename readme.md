@@ -1,7 +1,4 @@
-# ohtu-s22-palautukset 12
+# ohtu-s22-palautukset
 
 https://github.com/oskari6/ohtuvarasto
 https://github.com/oskari6/webcounter
-
-1
-2
