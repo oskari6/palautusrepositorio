@@ -20,3 +20,5 @@ selenium-screenshot-*.png
 # Editorit ja käyttöjärjestelmä
 .vscode
 .DS_Store
+
+/mutants/

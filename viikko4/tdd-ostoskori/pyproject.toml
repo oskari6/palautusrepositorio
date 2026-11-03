@@ -7,5 +7,14 @@ dependencies = []
 
 [dependency-groups]
 dev = [
+    "mutmut>=3.8.1",
     "pytest>=9.1.1",
 ]
+
+[tool.mutmut]
+source_paths = ["src/"]
+do_not_mutate = ["src/tests/*", "src/tuote.py", "src/index.py"]
+on_dependency_change = "rerun"
+
+[tool.pytest.ini_options]
+testpaths = ["src"]
