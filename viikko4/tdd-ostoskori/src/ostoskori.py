@@ -21,4 +21,4 @@ class Ostoskori:
         pass
 
     def ostokset(self):
-        pass
+        return self._ostokset
